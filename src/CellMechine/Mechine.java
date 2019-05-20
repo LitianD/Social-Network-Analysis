@@ -18,8 +18,10 @@ public class Mechine {
 		{
 			for(int j = 0 ; j < this.Size; j++)
 			{
-				if(Math.random() < 0.2)
+				if(Math.random() < 0.4)//几率要改
 				{
+					//在这里写初始化相关的操作
+
 					mechine[i][j] = new live((int)(Math.random() * 50),(int)(Math.random() * 50));
 				}
 				else
@@ -53,21 +55,40 @@ public class Mechine {
 			{
 				if(mechine[i][j] instanceof live)
 				{
-					instance = (live)mechine[i][j];
-
 					if(i > 0 && (mechine[i - 1][j] instanceof live)){
 						trade(mechine[i][j], mechine[i - 1][j]);
+						instance = (live)mechine[i - 1][j];
+						if(!instance.isLive())//如果寿命为0，则变为一个死细胞
+						{
+							mechine[i - 1][j] = new Die();
+						}
 					}
 					if(j > 0 && (mechine[i][j - 1] instanceof live)){
 						trade(mechine[i][j], mechine[i][j - 1]);
+						instance = (live)mechine[i][j - 1];
+						if(!instance.isLive())//如果寿命为0，则变为一个死细胞
+						{
+							mechine[i][j - 1] = new Die();
+						}
 					}
 					if((i < (Size - 1) && mechine[i + 1][j] instanceof live)){
 						trade(mechine[i][j], mechine[i + 1][j]);
+						instance = (live)mechine[i + 1][j];
+						if(!instance.isLive())//如果寿命为0，则变为一个死细胞
+						{
+							mechine[i + 1][j] = new Die();
+						}
 					}
 					if(j < (Size - 1) && mechine[i][j + 1] instanceof live){
 						trade(mechine[i][j], mechine[i][j + 1]);
+						instance = (live)mechine[i][j + 1];
+						if(!instance.isLive())//如果寿命为0，则变为一个死细胞
+						{
+							mechine[i][j + 1] = new Die();
+						}
 					}
 
+					instance = (live)mechine[i][j];
 					if(!instance.isLive())//如果寿命为0，则变为一个死细胞
 					{
 						mechine[i][j] = new Die();
@@ -96,20 +117,54 @@ public class Mechine {
 	//第一个cell一定是live，第二个是die
 	private void born(Cell oldCell, Cell newCell)
 	{
+
+
 		if(Math.random() < 0.15)	//这个几率要改
 		{
 			/**
 			 * 在这个地方写生孩子的函数
 			 */
+
+
 		}
 	}
 	//两个cell都是live
 	private void trade(Cell cellOne, Cell cellTwo){
-		if(Math.random() < 0.15)	//这个几率要改
+
+		live liveOne = (live)cellOne;
+		live liveTwo = (live)cellTwo;
+		live liveBig;
+		live liveSmall;
+		if(liveOne.skill > liveTwo.skill){
+			liveBig = liveOne;
+			liveSmall = liveTwo;
+		}else{
+			liveBig = liveTwo;
+			liveSmall = liveOne;
+		}
+		double tradeRate = (double)(liveBig.skill)/(double)(liveBig.skill + liveSmall.skill);
+
+
+
+		if(Math.random() < tradeRate)	//这个几率要改
 		{
-			/**
-			 * 在这个地方写交易的函数
-			 */
+			if(Math.random() < tradeRate){
+				liveBig.resource += (liveBig.skill - liveSmall.skill);
+				liveSmall.resource -= (liveBig.skill - liveSmall.skill);
+			}else {
+				liveSmall.resource += (liveBig.skill - liveSmall.skill);
+				liveBig.resource -= (liveBig.skill - liveSmall.skill);
+			}
+
+			liveBig.skill += 1;
+			liveSmall.skill +=2;
+		}
+		else{
+			liveBig.skill -= 1;
+			// TODO: 2019/5/20 小的社交能力如何减少待确认。
+			liveSmall.skill -= 0;
+
+			return;
 		}
 	}
 	

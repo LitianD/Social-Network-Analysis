@@ -4,8 +4,8 @@ import java.awt.Color;
 
 //这个类表示活着的人
 public class live implements Cell{
-	protected int resource;	//资源
-	protected int skill;	//社交能力
+	public int resource;	//资源
+	public int skill;	//社交能力
 	
 	public live(int Resource, int skill)
 	{
@@ -16,7 +16,12 @@ public class live implements Cell{
 	//返回表示这个细胞的颜色
 	public Color getColor()
 	{
-		int degree = 255 - this.resource * 4;	//资源越少越白
+		int degree = 255 - this.resource * 2;	//资源越少越白
+		if(degree > 255)
+			degree = 255;
+		if(degree < 0)
+			degree = 0;
+
 		return new Color(degree, degree, degree);
 	}
 	

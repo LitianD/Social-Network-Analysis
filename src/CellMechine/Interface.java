@@ -16,7 +16,7 @@ public class Interface extends JFrame{
 	public Interface(int size)
 	{
 		this.Size = size;
-		time = 100;
+		time = 10000;
 		mechine = new Mechine(Size);
 		panels = new JPanel[Size][Size];
 		
@@ -44,10 +44,10 @@ public class Interface extends JFrame{
 		
 		for(int count = 0 ; count < this.time; count ++)
 		{
-			this.mechine.loop();//所有细胞变老
+			this.mechine.loop();//遍历所有人
 			
 			try {
-				Thread.sleep(300);//暂停一会
+				Thread.sleep(100);//暂停一会
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
@@ -63,12 +63,10 @@ public class Interface extends JFrame{
 			this.repaint();//刷新屏幕
 		}
 		
-		
-		
 	}
 	
 	public static void main(String[] args)
-	{
-		new Interface(20).run();
+		{
+			new Interface(20).run();
 	}
 }
