@@ -47,7 +47,7 @@ public class Interface extends JFrame{
 			this.mechine.loop();//遍历所有人
 			
 			try {
-				Thread.sleep(100);//暂停一会
+				Thread.sleep(10);//暂停一会
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}

@@ -15,10 +15,10 @@ public class Mechine {
 		mechine= new Cell[Size][Size];//初始化细胞数组
 
         //int usedRes = 0;
-        for (int count = 0; count < this.Size * this.Size / 4; count++){
+        for (int count = 0; count < this.Size * this.Size / 2; count++){
             int i = (int)(Math.random() * this.Size);
             int j = (int)(Math.random() * this.Size);
-            int res = (int)(Math.random() * 50);
+            int res = (int)(Math.random() * 200);
             if (mechine[i][j] instanceof live){
                 count--;
             }
@@ -98,6 +98,38 @@ public class Mechine {
 							mechine[i][j + 1] = new Die();
 						}
 					}
+					if(i > 0 && j > 0 && (mechine[i - 1][j - 1] instanceof live)){
+						trade(mechine[i][j], mechine[i - 1][j - 1]);
+						instance = (live)mechine[i - 1][j - 1];
+						if(!instance.isLive())//如果寿命为0，则变为一个死细胞
+						{
+							mechine[i - 1][j - 1] = new Die();
+						}
+					}
+					if(i > 0 && j < (Size - 1) && (mechine[i - 1][j + 1] instanceof live)){
+						trade(mechine[i][j], mechine[i - 1][j + 1]);
+						instance = (live)mechine[i - 1][j + 1];
+						if(!instance.isLive())//如果寿命为0，则变为一个死细胞
+						{
+							mechine[i - 1][j + 1] = new Die();
+						}
+					}
+					if(j > 0 && i < (Size - 1) &&(mechine[i + 1][j - 1] instanceof live)){
+						trade(mechine[i][j], mechine[i + 1][j- 1]);
+						instance = (live)mechine[i + 1][j - 1];
+						if(!instance.isLive())//如果寿命为0，则变为一个死细胞
+						{
+							mechine[i + 1][j - 1] = new Die();
+						}
+					}
+					if(i < (Size - 1) && j < (Size - 1) && (mechine[i + 1][j + 1] instanceof live)){
+						trade(mechine[i][j], mechine[i + 1][j + 1]);
+						instance = (live)mechine[i + 1][j + 1];
+						if(!instance.isLive())//如果寿命为0，则变为一个死细胞
+						{
+							mechine[i + 1][j + 1] = new Die();
+						}
+					}
 
 					instance = (live)mechine[i][j];
 					if(!instance.isLive())//如果寿命为0，则变为一个死细胞
@@ -119,6 +151,18 @@ public class Mechine {
 					if(j < (Size - 1) && mechine[i][j + 1] instanceof Die){
 						born(mechine[i][j], i, j + 1);
 					}
+					if(i > 0 && j > 0 && (mechine[i - 1][j - 1] instanceof live)){
+						born(mechine[i][j], i - 1, j - 1);
+					}
+					if(i > 0 && j < (Size - 1) && (mechine[i - 1][j + 1] instanceof live)){
+						born(mechine[i][j], i - 1, j + 1);
+					}
+					if(j > 0 && i < (Size - 1) &&(mechine[i + 1][j - 1] instanceof live)){
+						born(mechine[i][j], i + 1, j - 1);
+					}
+					if(i < (Size - 1) && j < (Size - 1) && (mechine[i + 1][j + 1] instanceof live)){
+						born(mechine[i][j], i + 1, j + 1);
+					}
 
 				}
 				
@@ -129,7 +173,7 @@ public class Mechine {
 	//第一个cell一定是live，第二个是die
 	private void born(Cell oldCell, int i, int j)
 	{
-		if(((live)oldCell).resource > 100)	//这个几率要改
+		if(((live)oldCell).resource > 30 && Math.random()<0.25)	//这个几率要改
 		{
 			/**
 			 * 在这个地方写生孩子的函数
