@@ -6,24 +6,31 @@ public class Mechine {
 	private int Size;
 	//private int Resource = 2000;
 
-	private Cell[][] mechine;
+	private live[][] mechine;
+
 
 	public Mechine(int size)
 	{
 		this.Size = size;
 		
-		mechine= new Cell[Size][Size];//初始化细胞数组
+		mechine= new live[Size][Size];//初始化细胞数组
+		for(int i = 0; i < this.Size; i++){
+			for(int j = 0 ; j < this.Size; j++){
+				mechine[i][j] = new live();
+			}
+		}
+
 
         //int usedRes = 0;
         for (int count = 0; count < this.Size * this.Size / 2; count++){
             int i = (int)(Math.random() * this.Size);
             int j = (int)(Math.random() * this.Size);
             int res = (int)(Math.random() * 200);
-            if (mechine[i][j] instanceof live){
+            if (mechine[i][j].isLive()){
                 count--;
             }
             else {
-                mechine[i][j] = new live(res, (int)(Math.random() * 50));
+                mechine[i][j].refresh(res, (int)(Math.random() * 50));
             }
         }
 
@@ -32,9 +39,9 @@ public class Mechine {
 		{
 			for(int j = 0 ; j < this.Size; j++)
 			{
-				if(! (mechine[i][j] instanceof live))
+				if(! (mechine[i][j].isLive()))
 				{
-					mechine[i][j] = new Die();
+					mechine[i][j].refresh(0, 0);
 				}
 			}
 		}
@@ -62,105 +69,105 @@ public class Mechine {
 		{
 			for(int j = 0 ; j < this.Size; j++)
 			{
-				if(mechine[i][j] instanceof live)
+				if(mechine[i][j].isLive())
 				{
 					instance = (live)mechine[i][j];
 
-					if(i > 0 && (mechine[i - 1][j] instanceof live)){
+					if(i > 0 && (mechine[i - 1][j].isLive())){
 						trade(mechine[i][j], mechine[i - 1][j]);
 						instance = (live)mechine[i - 1][j];
 						if(!instance.isLive())//如果寿命为0，则变为一个死细胞
 						{
-							mechine[i - 1][j] = new Die();
+							mechine[i - 1][j].refresh(0, 0);
 						}
 					}
-					if(j > 0 && (mechine[i][j - 1] instanceof live)){
+					if(j > 0 && (mechine[i][j - 1].isLive())){
 						trade(mechine[i][j], mechine[i][j - 1]);
 						instance = (live)mechine[i][j - 1];
 						if(!instance.isLive())//如果寿命为0，则变为一个死细胞
 						{
-							mechine[i][j - 1] = new Die();
+							mechine[i][j - 1].refresh(0, 0);
 						}
 					}
-					if((i < (Size - 1) && mechine[i + 1][j] instanceof live)){
+					if((i < (Size - 1) && mechine[i + 1][j].isLive())){
 						trade(mechine[i][j], mechine[i + 1][j]);
 						instance = (live)mechine[i + 1][j];
 						if(!instance.isLive())//如果寿命为0，则变为一个死细胞
 						{
-							mechine[i + 1][j] = new Die();
+							mechine[i + 1][j].refresh(0, 0);
 						}
 					}
-					if(j < (Size - 1) && mechine[i][j + 1] instanceof live){
+					if(j < (Size - 1) && mechine[i][j + 1].isLive()){
 						trade(mechine[i][j], mechine[i][j + 1]);
 						instance = (live)mechine[i][j + 1];
 						if(!instance.isLive())//如果寿命为0，则变为一个死细胞
 						{
-							mechine[i][j + 1] = new Die();
+							mechine[i][j + 1].refresh(0, 0);
 						}
 					}
-					if(i > 0 && j > 0 && (mechine[i - 1][j - 1] instanceof live)){
+					if(i > 0 && j > 0 && (mechine[i - 1][j - 1].isLive())){
 						trade(mechine[i][j], mechine[i - 1][j - 1]);
 						instance = (live)mechine[i - 1][j - 1];
 						if(!instance.isLive())//如果寿命为0，则变为一个死细胞
 						{
-							mechine[i - 1][j - 1] = new Die();
+							mechine[i - 1][j - 1].refresh(0, 0);
 						}
 					}
-					if(i > 0 && j < (Size - 1) && (mechine[i - 1][j + 1] instanceof live)){
+					if(i > 0 && j < (Size - 1) && (mechine[i - 1][j + 1].isLive())){
 						trade(mechine[i][j], mechine[i - 1][j + 1]);
 						instance = (live)mechine[i - 1][j + 1];
 						if(!instance.isLive())//如果寿命为0，则变为一个死细胞
 						{
-							mechine[i - 1][j + 1] = new Die();
+							mechine[i - 1][j + 1].refresh(0, 0);
 						}
 					}
-					if(j > 0 && i < (Size - 1) &&(mechine[i + 1][j - 1] instanceof live)){
+					if(j > 0 && i < (Size - 1) &&(mechine[i + 1][j - 1].isLive())){
 						trade(mechine[i][j], mechine[i + 1][j- 1]);
 						instance = (live)mechine[i + 1][j - 1];
 						if(!instance.isLive())//如果寿命为0，则变为一个死细胞
 						{
-							mechine[i + 1][j - 1] = new Die();
+							mechine[i + 1][j - 1].refresh(0, 0);
 						}
 					}
-					if(i < (Size - 1) && j < (Size - 1) && (mechine[i + 1][j + 1] instanceof live)){
+					if(i < (Size - 1) && j < (Size - 1) && (mechine[i + 1][j + 1].isLive())){
 						trade(mechine[i][j], mechine[i + 1][j + 1]);
 						instance = (live)mechine[i + 1][j + 1];
 						if(!instance.isLive())//如果寿命为0，则变为一个死细胞
 						{
-							mechine[i + 1][j + 1] = new Die();
+							mechine[i + 1][j + 1].refresh(0, 0);
 						}
 					}
 
 					instance = (live)mechine[i][j];
 					if(!instance.isLive())//如果寿命为0，则变为一个死细胞
 					{
-						mechine[i][j] = new Die();
+						mechine[i][j].refresh(0, 0);
 						continue;
 					}
 
 					//判断某个细胞周围又空地
-					if(i > 0 && (mechine[i - 1][j] instanceof Die)){
+					if(i > 0 && (!mechine[i - 1][j].isLive())){
 						born(mechine[i][j], i - 1, j);
 					}
-					if(j > 0 && (mechine[i][j - 1] instanceof Die)){
+					if(j > 0 && (!mechine[i][j - 1].isLive())){
 						born(mechine[i][j], i ,j - 1);
 					}
-					if((i < (Size - 1) && mechine[i + 1][j] instanceof Die)){
+					if((i < (Size - 1) && !mechine[i + 1][j].isLive())){
 						born(mechine[i][j], i + 1, j );
 					}
-					if(j < (Size - 1) && mechine[i][j + 1] instanceof Die){
+					if(j < (Size - 1) && !mechine[i][j + 1].isLive()){
 						born(mechine[i][j], i, j + 1);
 					}
-					if(i > 0 && j > 0 && (mechine[i - 1][j - 1] instanceof live)){
+					if(i > 0 && j > 0 && !(mechine[i - 1][j - 1].isLive())){
 						born(mechine[i][j], i - 1, j - 1);
 					}
-					if(i > 0 && j < (Size - 1) && (mechine[i - 1][j + 1] instanceof live)){
+					if(i > 0 && j < (Size - 1) && !(mechine[i - 1][j + 1].isLive())){
 						born(mechine[i][j], i - 1, j + 1);
 					}
-					if(j > 0 && i < (Size - 1) &&(mechine[i + 1][j - 1] instanceof live)){
+					if(j > 0 && i < (Size - 1) && !(mechine[i + 1][j - 1].isLive())){
 						born(mechine[i][j], i + 1, j - 1);
 					}
-					if(i < (Size - 1) && j < (Size - 1) && (mechine[i + 1][j + 1] instanceof live)){
+					if(i < (Size - 1) && j < (Size - 1) && !(mechine[i + 1][j + 1].isLive())){
 						born(mechine[i][j], i + 1, j + 1);
 					}
 
@@ -171,23 +178,21 @@ public class Mechine {
 	}
 
 	//第一个cell一定是live，第二个是die
-	private void born(Cell oldCell, int i, int j)
+	private void born(live oldCell, int i, int j)
 	{
-		if(((live)oldCell).resource > 30 && Math.random()<0.25)	//这个几率要改
+		if((oldCell).resource > 30 && Math.random()<0.25)	//这个几率要改
 		{
 			/**
 			 * 在这个地方写生孩子的函数
 			 */
             ((live)oldCell).resource = ((live)oldCell).resource / 2;
-            mechine[i][j] = new live(((live)oldCell).resource / 2, ((live)oldCell).skill/2);
+            mechine[i][j].refresh(((live)oldCell).resource / 2, ((live)oldCell).skill/2);
 		}
 	}
 
 	//两个cell都是live
-	private void trade(Cell cellOne, Cell cellTwo){
+	private void trade(live liveOne, live liveTwo){
 
-		live liveOne = (live)cellOne;
-		live liveTwo = (live)cellTwo;
 		live liveBig;
 		live liveSmall;
 		if(liveOne.skill > liveTwo.skill){

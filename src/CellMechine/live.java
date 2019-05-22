@@ -7,8 +7,13 @@ public class live implements Cell{
 	public int resource;	//资源
 	public int skill;	//社交能力
 	
-	public live(int Resource, int skill)
+	public live()
 	{
+		this.resource = 0;
+		this.skill = 0;
+	}
+
+	public void refresh(int Resource, int skill){
 		this.resource = Resource;
 		this.skill = skill;
 	}
