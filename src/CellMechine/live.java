@@ -22,7 +22,7 @@ public class live implements Cell{
 		this.skill = skill;
 	}
 
-	//返回表示这个细胞的颜色
+	//返回表示这个细胞的资源的颜色
 	public Color getColor()
 	{
 		int degree = 255 - this.resource * 2;	//资源越少越白
@@ -31,7 +31,17 @@ public class live implements Cell{
 		if(degree < 0)
 			degree = 0;
 
-		return new Color(degree, degree, degree);
+		return new Color(degree, 255, degree);
+	}
+
+	public Color getSkillColor(){
+		int degree = 255 - this.skill * 2;	//资源越少越白
+		if(degree > 255)
+			degree = 255;
+		if(degree < 0)
+			degree = 0;
+
+		return new Color(255, degree, degree);
 	}
 
 	//isDie表示这个细胞是否已经死亡（用于一次刷新之后判断是否要把这个细胞变成Die

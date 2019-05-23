@@ -61,6 +61,10 @@ public class Mechine {
 		return mechine[i][j].getColor();
 	}
 
+	public Color getSkillColor(int i, int j){
+	    return mechine[i][j].getSkillColor();
+    }
+
 	public void loop(int count)//一次循环遍历，对每个人都是一个社交周期
 	{
 		live instance;
