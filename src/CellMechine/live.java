@@ -1,12 +1,16 @@
 package CellMechine;
 
 import java.awt.Color;
+import java.util.ArrayList;
+import java.util.List;
 
 //这个类表示活着的人
 public class live implements Cell{
 	public int resource;	//资源
 	public int skill;	//社交能力
-	
+	public List<State> record = new ArrayList<State>();
+
+
 	public live()
 	{
 		this.resource = 0;
@@ -17,7 +21,7 @@ public class live implements Cell{
 		this.resource = Resource;
 		this.skill = skill;
 	}
-	
+
 	//返回表示这个细胞的颜色
 	public Color getColor()
 	{
@@ -29,7 +33,7 @@ public class live implements Cell{
 
 		return new Color(degree, degree, degree);
 	}
-	
+
 	//isDie表示这个细胞是否已经死亡（用于一次刷新之后判断是否要把这个细胞变成Die
 	// ）资源没了就死了
 	public boolean isLive()
@@ -39,6 +43,11 @@ public class live implements Cell{
 		else
 			return false;
 	}
-	
-	
+
+
+	public State getLastElement(){
+		System.out.println("index : " + this.record.size());
+		return this.record.get(this.record.size() - 1);
+	}
+
 }
