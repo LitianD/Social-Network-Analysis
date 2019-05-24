@@ -2,16 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1bf9166c-f44f-4d51-bce8-eee9845e2ddc" name="Default" comment="薛飞跃的写入文件">
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/CellMechine/Interface.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/CellMechine/Interface.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/CellMechine/Mechine.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/CellMechine/Mechine.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/CellMechine/live.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/CellMechine/live.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CellMechine/Interface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CellMechine/Interface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CellMechine/Mechine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CellMechine/Mechine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CellMechine/live.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CellMechine/live.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CellMechine/Interface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CellMechine/Main.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/bin/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -23,42 +21,107 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file leaf-file-name="Mechine.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/CellMechine/Mechine.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="475">
+            <state relative-caret-position="1368">
               <caret line="64" column="45" selection-start-line="64" selection-start-column="45" selection-end-line="64" selection-end-column="45" />
-              <folding>
-                <element signature="e#1141#1142#0" expanded="true" />
-                <element signature="e#1173#1174#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file leaf-file-name="live.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/CellMechine/live.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="185">
-              <caret line="33" column="46" lean-forward="true" selection-start-line="33" selection-start-column="46" selection-end-line="33" selection-end-column="46" />
+            <state relative-caret-position="240">
+              <caret line="42" selection-start-line="42" selection-end-line="42" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file leaf-file-name="JAVA/CellMechine.State" pinned="false" current-in-tab="true">
+        <entry file="uml://JAVA/CellMechine.State">
+          <provider selected="true" editor-type-id="UmlEditorProvider">
+            <state>
+              <ID>JAVA</ID>
+              <OriginalElement>CellMechine.State</OriginalElement>
+              <nodes>
+                <node x="31.10937500000003" y="613.0">CellMechine.Main</node>
+                <node x="0.0" y="370.0">CellMechine.Mechine</node>
+                <node x="71.13020833333334" y="150.0">CellMechine.live</node>
+                <node x="273.13020833333337" y="208.5">CellMechine.Die</node>
+                <node x="243.63020833333334" y="23.5">CellMechine.Cell</node>
+                <node x="30.258333333333354" y="0.0">CellMechine.State</node>
+              </nodes>
+              <notes />
+              <edges>
+                <edge source="CellMechine.live" target="CellMechine.State">
+                  <point x="-68.25" y="-85.0" />
+                  <point x="93.88020833333334" y="125.0" />
+                  <point x="103.75833333333335" y="125.0" />
+                  <point x="0.0" y="50.0" />
+                </edge>
+                <edge source="CellMechine.Die" target="CellMechine.Cell">
+                  <point x="0.0" y="-26.5" />
+                  <point x="29.5" y="26.5" />
+                </edge>
+                <edge source="CellMechine.live" target="CellMechine.Cell">
+                  <point x="68.25" y="-85.0" />
+                  <point x="230.38020833333334" y="125.0" />
+                  <point x="273.13020833333337" y="125.0" />
+                  <point x="-29.5" y="26.5" />
+                </edge>
+                <edge source="CellMechine.Main" target="CellMechine.Mechine">
+                  <point x="-44.0" y="-50.0" />
+                  <point x="75.10937500000003" y="588.0" />
+                  <point x="56.0" y="588.0" />
+                  <point x="-56.0" y="96.5" />
+                </edge>
+                <edge source="CellMechine.Mechine" target="CellMechine.State">
+                  <point x="-89.60000000000002" y="-96.5" />
+                  <point x="22.399999999999977" y="345.0" />
+                  <point x="49.63020833333334" y="345.0" />
+                  <point x="49.63020833333334" y="125.0" />
+                  <point x="44.95833333333334" y="125.0" />
+                  <point x="-58.80000000000001" y="50.0" />
+                </edge>
+                <edge source="CellMechine.Mechine" target="CellMechine.live">
+                  <point x="89.60000000000002" y="-96.5" />
+                  <point x="201.60000000000002" y="345.0" />
+                  <point x="222.79687499999997" y="345.0" />
+                  <point x="60.66666666666663" y="85.0" />
+                </edge>
+              </edges>
+              <settings layout="Hierarchic Group" zoom="0.7999999999999999" x="669.3750000000001" y="337.50000000000006" />
+              <SelectedNodes>
+                <node>CellMechine.Main</node>
+              </SelectedNodes>
+              <Categories>
+                <Category>Constructors</Category>
+                <Category>Methods</Category>
+                <Category>Properties</Category>
+                <Category>Inner Classes</Category>
+              </Categories>
+              <SCOPE>All</SCOPE>
+              <VISIBILITY>private</VISIBILITY>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="State.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/CellMechine/State.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="50">
+            <state relative-caret-position="48">
               <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/CellMechine/Interface.java">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/CellMechine/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="81" column="69" selection-start-line="81" selection-start-column="69" selection-end-line="81" selection-end-column="69" />
+            <state relative-caret-position="96">
+              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -82,16 +145,26 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="953" />
-    <option name="width" value="974" />
-    <option name="height" value="1047" />
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths />
+  </component>
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="952" />
+    <option name="width" value="975" />
+    <option name="height" value="1048" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -114,18 +187,19 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/img" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -145,8 +219,8 @@
     </option>
   </component>
   <component name="RunManager">
-    <configuration name="Interface" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="CellMechine.Interface" />
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="CellMechine.Main" />
       <module name="CellMechine" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
@@ -155,35 +229,60 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <method v="2">
+      <method>
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <method v="2">
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+      <method>
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="TestNG">
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
       <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
       <properties />
       <listeners />
-      <method v="2">
+      <method>
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Interface" />
+        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -202,6 +301,7 @@
       <workItem from="1558529745228" duration="3396000" />
       <workItem from="1558596309928" duration="321000" />
       <workItem from="1558614654317" duration="1775000" />
+      <workItem from="1558662304607" duration="566000" />
     </task>
     <task id="LOCAL-00001" summary="改成全是live">
       <created>1558534837107</created>
@@ -221,47 +321,50 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6697000" />
+    <option name="totallyTimeSpent" value="7263000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="878" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17803837" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Image Layers" order="2" />
-      <window_info id="Designer" order="3" />
-      <window_info id="UI Designer" order="4" />
-      <window_info id="Capture Tool" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.335141" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Statistic" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" />
-      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="12" weight="0.329718" />
-      <window_info anchor="bottom" id="Docker" order="13" show_stripe_button="false" />
-      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info anchor="right" id="Database" order="6" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.329718" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info id="Image Layers" order="2" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="8" />
+      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.1565452" />
+      <window_info anchor="bottom" id="Terminal" order="10" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Designer" order="3" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1802949" />
+      <window_info anchor="bottom" id="Statistic" order="9" />
+      <window_info anchor="right" id="Database" order="6" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info id="UI Designer" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="bottom" id="Docker" order="13" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="right" id="Maven" order="9" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="改成全是live" />
@@ -269,6 +372,34 @@
     <option name="LAST_COMMIT_MESSAGE" value="薛飞跃的写入文件" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/CellMechine/Mechine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1368">
+          <caret line="64" column="45" selection-start-line="64" selection-start-column="45" selection-end-line="64" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CellMechine/State.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CellMechine/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1872">
+          <caret line="81" column="69" selection-start-line="81" selection-start-column="69" selection-end-line="81" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CellMechine/live.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="792">
+          <caret line="33" column="46" lean-forward="true" selection-start-line="33" selection-start-column="46" selection-end-line="33" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/CellMechine/Die.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
@@ -287,59 +418,102 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../3/Social-Network-Analysis/src/CellMechine/Die.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../3/Social-Network-Analysis/src/CellMechine/live.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="13" column="17" lean-forward="true" selection-end-line="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../3/Social-Network-Analysis/src/CellMechine/Mechine.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="187" column="9" lean-forward="true" selection-end-line="278" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../3/Social-Network-Analysis/src/CellMechine/Interface.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-350">
-          <caret line="15" column="30" lean-forward="true" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CellMechine/Interface.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="81" column="69" selection-start-line="81" selection-start-column="69" selection-end-line="81" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/../../3/Social-Network-Analysis/src/CellMechine/Die.java" />
+    <entry file="file://$PROJECT_DIR$/../../3/Social-Network-Analysis/src/CellMechine/live.java" />
+    <entry file="file://$PROJECT_DIR$/../../3/Social-Network-Analysis/src/CellMechine/Mechine.java" />
+    <entry file="file://$PROJECT_DIR$/../../3/Social-Network-Analysis/src/CellMechine/Interface.java" />
     <entry file="file://$PROJECT_DIR$/src/CellMechine/Mechine.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
+        <state relative-caret-position="1368">
           <caret line="64" column="45" selection-start-line="64" selection-start-column="45" selection-end-line="64" selection-end-column="45" />
-          <folding>
-            <element signature="e#1141#1142#0" expanded="true" />
-            <element signature="e#1173#1174#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/CellMechine/State.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50">
+        <state relative-caret-position="48">
           <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/CellMechine/live.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
-          <caret line="33" column="46" lean-forward="true" selection-start-line="33" selection-start-column="46" selection-end-line="33" selection-end-column="46" />
+        <state relative-caret-position="240">
+          <caret line="42" selection-start-line="42" selection-end-line="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CellMechine/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/CellMechine.State">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>CellMechine.State</OriginalElement>
+          <nodes>
+            <node x="31.10937500000003" y="613.0">CellMechine.Main</node>
+            <node x="0.0" y="370.0">CellMechine.Mechine</node>
+            <node x="71.13020833333334" y="150.0">CellMechine.live</node>
+            <node x="273.13020833333337" y="208.5">CellMechine.Die</node>
+            <node x="243.63020833333334" y="23.5">CellMechine.Cell</node>
+            <node x="30.258333333333354" y="0.0">CellMechine.State</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="CellMechine.live" target="CellMechine.State">
+              <point x="-68.25" y="-85.0" />
+              <point x="93.88020833333334" y="125.0" />
+              <point x="103.75833333333335" y="125.0" />
+              <point x="0.0" y="50.0" />
+            </edge>
+            <edge source="CellMechine.Die" target="CellMechine.Cell">
+              <point x="0.0" y="-26.5" />
+              <point x="29.5" y="26.5" />
+            </edge>
+            <edge source="CellMechine.live" target="CellMechine.Cell">
+              <point x="68.25" y="-85.0" />
+              <point x="230.38020833333334" y="125.0" />
+              <point x="273.13020833333337" y="125.0" />
+              <point x="-29.5" y="26.5" />
+            </edge>
+            <edge source="CellMechine.Main" target="CellMechine.Mechine">
+              <point x="-44.0" y="-50.0" />
+              <point x="75.10937500000003" y="588.0" />
+              <point x="56.0" y="588.0" />
+              <point x="-56.0" y="96.5" />
+            </edge>
+            <edge source="CellMechine.Mechine" target="CellMechine.State">
+              <point x="-89.60000000000002" y="-96.5" />
+              <point x="22.399999999999977" y="345.0" />
+              <point x="49.63020833333334" y="345.0" />
+              <point x="49.63020833333334" y="125.0" />
+              <point x="44.95833333333334" y="125.0" />
+              <point x="-58.80000000000001" y="50.0" />
+            </edge>
+            <edge source="CellMechine.Mechine" target="CellMechine.live">
+              <point x="89.60000000000002" y="-96.5" />
+              <point x="201.60000000000002" y="345.0" />
+              <point x="222.79687499999997" y="345.0" />
+              <point x="60.66666666666663" y="85.0" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="0.7999999999999999" x="669.3750000000001" y="337.50000000000006" />
+          <SelectedNodes>
+            <node>CellMechine.Main</node>
+          </SelectedNodes>
+          <Categories>
+            <Category>Constructors</Category>
+            <Category>Methods</Category>
+            <Category>Properties</Category>
+            <Category>Inner Classes</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
         </state>
       </provider>
     </entry>

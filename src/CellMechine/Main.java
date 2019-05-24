@@ -5,7 +5,7 @@ import java.awt.*;
 import javax.swing.*;
 import javax.swing.border.EtchedBorder;
 
-public class Interface extends JFrame{
+public class Main extends JFrame{
 	private JPanel resourceP;
 	private JPanel skillP;
 	private JPanel centerP;
@@ -15,7 +15,7 @@ public class Interface extends JFrame{
 	private int Size;
 	private int time;
 
-	public Interface(int size)
+	public Main(int size)
 	{
 		this.Size = size;
 		time = 10000;
@@ -90,6 +90,6 @@ public class Interface extends JFrame{
 
 	public static void main(String[] args)
 	{
-		new Interface(20).run();
+		new Main(20).run();
 	}
 }
