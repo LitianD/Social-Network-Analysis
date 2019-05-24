@@ -4,6 +4,7 @@
 
 - [Social-Network-Analysis](#social-network-analysis)
 - [1 Background Analysis](#1-background-analysis)
+            - [Keywords: Social Network、 Social Network Analysis、 Cellular Automata](#keywords-social-network-social-network-analysis-cellular-automata)
 - [2 Model Hypothesis](#2-model-hypothesis)
 - [3 Symbol Description](#3-symbol-description)
 - [4 Model Building](#4-model-building)
@@ -19,6 +20,13 @@
     - [5.1 Programming](#51-programming)
     - [5.2 Experimental group design](#52-experimental-group-design)
     - [5.3 Results Analysis Design](#53-results-analysis-design)
+- [6 Statistic Analysis](#6-statistic-analysis)
+    - [6.1 Icon statistics](#61-icon-statistics)
+    - [6.2 Group experiment comparison results](#62-group-experiment-comparison-results)
+- [7 Evaluation improvement](#7-evaluation-improvement)
+    - [7.1 Model advantage](#71-model-advantage)
+    - [7.2 Model disadvantage](#72-model-disadvantage)
+    - [7.3 Model improvement](#73-model-improvement)
 
 <!-- /TOC -->
 
@@ -176,9 +184,9 @@ Group one|Number of individuals|individual distribution, resource allocation met
 Group two | Individual Distribution | Individual Quantity, Resource Allocation Method | 1, 4, 5
 Group three|Resource allocation method|number of individuals, individual distribution|1,6,7
 
-# 6 统计分析
+# 6 Statistic Analysis
 
-##	6.1 图标统计结果
+##	6.1 Icon statistics
 
 如下是实验一的统计分析过程
 
@@ -220,7 +228,7 @@ Group three|Resource allocation method|number of individuals, individual distrib
 
 从死亡比率图中我们可以看到，只是能力值在50以上的个体死亡数就占了总数的71%，死亡数与能力值呈正相关。死亡率与新生率相互依存，使系统处在不断变化的状态中。表明在社交过程中风险与机会并存。
 
-##  6.2 分组实验对比结果
+##  6.2 Group experiment comparison results
 
 + 个体数量影响
 
@@ -234,22 +242,22 @@ Group three|Resource allocation method|number of individuals, individual distrib
 
 在负相关分布中，大量存在着两种与情况1不同的极端属性个体，即高能力低资源型个体与低能力高资源型个体。可以预见的是，由于发生社交行为时，资源的掠夺与给予只取决于能力，与资源无关，所以与实验数据所表现出来的相同：即使在初始迭代中出现了高能力个体与低能力个体的数量，持有资源，死亡数和新生数的交叉，但是在50轮的迭代之后，结果仍与情况1的变化趋势相同。在实验7中，资源与能力分布的正相关加剧了这一过程，使各曲线很快地收敛至稳态。可以看到，资源分布只影响系统达到稳态的时间，不影响整个系统的进化方向。
 
-# 7 评价改进
+# 7 Evaluation improvement
 
-## 7.1 模型优点
+## 7.1 Model advantage
 
 + 每个个体同时具有社交能力值和资源数两个属性，个体之间互动复杂程度更高，更接近真实社交。
 + 由社交能力值影响社交行为，个体之间的互动较为合理。
 + 以一定的概率发生社交和交换资源，可以有效防止贫富差距过大。
 + 个体可以分裂，增加了复杂程度，也一定程度上避免了贫富差距。
 
-## 7.2 模型缺点
+## 7.2 Model disadvantage
 
 + 只考虑了社交能力值一种影响社交行为的因素。
 + 分裂行为只由一个个体决定，与真实情况不符。
 + 社交能力值和资源数的改变不具有说服力。
 
-## 7.3 模型改进
+## 7.3 Model improvement
 
 + 适当增加影响社交行为的因素，比如个人情绪等，一定程度上影响社交行为。
 + 考虑仿真真实社会，由两个个体分裂出新个体。
