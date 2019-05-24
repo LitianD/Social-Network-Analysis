@@ -31,7 +31,7 @@ A **social network** is a social structure made up of a set of social actors (su
 
 In this experiment, we used the **cellular automaton model to perform a social network analysis on the relationship of anyone in the social network**, and designed one by controlling two variables of social competence and social resources. A series of social rules that look at the results of social networks reaching steady state in different situations.
 
-Keywords: social network social network analysis cellular automata
+#### Keywords: Social Network、 Social Network Analysis、 Cellular Automata
 
 # 2 Model Hypothesis
 
