@@ -1,5 +1,27 @@
 # Social-Network-Analysis
 
+<!-- TOC -->
+
+- [Social-Network-Analysis](#social-network-analysis)
+- [1 背景分析](#1-背景分析)
+- [2 模型假设](#2-模型假设)
+- [3 符号说明](#3-符号说明)
+- [4 模型建立](#4-模型建立)
+    - [4.1 社交环节对照](#41-社交环节对照)
+    - [4.2 定义阶段](#42-定义阶段)
+    - [4.3 迭代竞争阶段](#43-迭代竞争阶段)
+        - [迭代假设](#迭代假设)
+- [5 仿真模拟设计](#5-仿真模拟设计)
+    - [5.1 程序设计](#51-程序设计)
+    - [5.2 实验分组设计](#52-实验分组设计)
+    - [5.3结果分析设计](#53结果分析设计)
+- [6 结果分析](#6-结果分析)
+    - [6.1 个体数量影响](#61-个体数量影响)
+    - [6.2个体分布影响](#62个体分布影响)
+    - [6.3资源分配方式影响](#63资源分配方式影响)
+
+<!-- /TOC -->
+
 # 1 背景分析
 
 A **social network** is a social structure made up of a set of social actors (such as individuals or organizations), sets of dyadic ties, and other social interactions between actors. In the context of networks, social capital exists where people have an advantage because of their location in a network. Contacts in a network provide information, opportunities and perspectives that can be beneficial to the central player in the network. Most social structures tend to be characterized by dense clusters of strong connections.
