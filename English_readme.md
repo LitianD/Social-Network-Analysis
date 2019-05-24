@@ -63,7 +63,6 @@ At this stage, the social scenes in real life are reasonably abstracted into mat
 
 **Social Ability**: Social ability reflects the ability of a person to exchange resources for social behavior. The stronger the ability, the more likely it is to obtain resources; the weaker the ability, the more likely the resources are plundered. Social ability is likely to increase in one-time social behavior and may weaken.
 
-
 Real scene | model abstraction
 --|--
 In real life, even if the neighbors do not necessarily have social interactions | two neighbors have a certain probability p(c _i/c _i+ c _j) exchange resources
@@ -102,13 +101,13 @@ There are 5 links in each iteration, provided that two individuals are adjacent,
 
 In real life, people with high social abilities take the initiative in the initiation of social relationships. Therefore, at the beginning of each iteration, each individual is traversed in turn, and the social ability value of all neighboring individuals around it is judged. We assume that each social interaction is initiated by individuals with higher social values. For example, the current cell is c_i and c_j is a neighbor of c_i. C_j is ignored when c_i < c_j, and c_j is called a social candidate of c_i when c_i >= c_j.
 
-<center>![](/img/9.png)</center>
+![](/img/9.png)
 
 ### 4.3.2 Whether to start social
 
 In this step, the individual initiates a social behavior to the surrounding social candidate. But everything is accidental. People with high social skills don't necessarily socialize with everyone around you. For an individual c_i, even if c_i >= c_j, it does not necessarily socialize with c_j. We assume that the probability that this high social ability value individual (c_i) will socialize to a social candidate (c_j) is c_i / (c_i + c_j).
 
-<center>![](/img/10.png)</center>
+![](/img/10.png)
 
 ### 4.3.3 Starting social
 
@@ -118,7 +117,7 @@ Social interaction in reality is essentially the exchange of resources. For each
 
 For each social behavior, the number of resources exchanged between the two individuals who initiated the socialization is |c_i - c_j|. In other words, people with strong social skills will be more likely to get resources from social behavior. The more disparity between the social skills of the two sides, the more resources are acquired or lost.
 
-<center>![](/img/7.png)</center>
+![](/img/7.png)
 
 When the number of resources of an individual after the change in energy resources is zero, the individual will die and no longer participate in social behavior.
 
@@ -126,7 +125,7 @@ When the number of resources of an individual after the change in energy resourc
 
 In the display society, each social behavior can bring success, positive social experience, and enhance self-confidence in the social process. A failed society can leave a shadow on people's minds and make people fear social. At the end of each iteration, if the social interaction between the two individuals is successful, the social ability is increased by x, otherwise the step is directly performed after judging that the social is initiated: both social skills are weakened by x.
 
-<center>![](/img/8.png)</center>
+![](/img/8.png)
 
 # 5 Simulation and Simulation Design
 
@@ -136,7 +135,7 @@ In order to validate the model, simulate the results of the social network envir
 
 The programming framework is as follows:
 
-<center>![](/img/6.png)</center>
+![](/img/6.png)
 
 Using the JFrame visualization framework, the left image is the individual resource, the right image is the individual's social ability value, the light color indicates that the value is low, and vice versa indicates that the value is high.
 
