@@ -49,10 +49,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="live.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="live.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/CellMechine/live.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
+            <state relative-caret-position="-727">
               <caret line="15" column="21" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="21" />
               <folding>
                 <element signature="e#239#246#0" expanded="true" />
@@ -70,11 +70,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/CellMechine/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1303">
-              <caret line="14" column="21" lean-forward="true" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
+            <state relative-caret-position="-432">
+              <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
             </state>
           </provider>
         </entry>
@@ -107,7 +107,7 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="952" />
     <option name="width" value="975" />
     <option name="height" value="1048" />
@@ -254,7 +254,7 @@
       <workItem from="1558529745228" duration="3396000" />
       <workItem from="1558596309928" duration="321000" />
       <workItem from="1558614654317" duration="1775000" />
-      <workItem from="1558662304607" duration="1374000" />
+      <workItem from="1558662304607" duration="1989000" />
     </task>
     <task id="LOCAL-00001" summary="改成全是live">
       <created>1558534837107</created>
@@ -274,7 +274,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8071000" />
+    <option name="totallyTimeSpent" value="8686000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="878" extended-state="6" />
@@ -290,7 +290,7 @@
       <window_info anchor="right" id="Maven Projects" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.15718158" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.15718158" />
       <window_info anchor="bottom" id="Terminal" order="10" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Designer" order="3" />
@@ -388,13 +388,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/CellMechine/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1303">
-          <caret line="14" column="21" lean-forward="true" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/CellMechine/Mechine.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="528">
@@ -429,11 +422,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/CellMechine/live.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
+        <state relative-caret-position="-727">
           <caret line="15" column="21" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="21" />
           <folding>
             <element signature="e#239#246#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CellMechine/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-432">
+          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
         </state>
       </provider>
     </entry>
